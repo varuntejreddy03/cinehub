@@ -4,121 +4,121 @@ const WA_BOOK = "https://wa.me/917702521717?text=Hi%20Cine%20Hub%2C%20I%20want%2
 
 function IPhoneMockup() {
   return (
-    <div className="hero-iphone" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+    <div className="hero-iphone" style={{
+      maxWidth: 280, width: '100%', margin: '0 auto',
+      paddingRight: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
+      flexShrink: 0, position: 'relative',
+    }}>
+      {/* Red glow behind phone */}
       <div style={{
-        animation: 'phoneFloat 3s ease-in-out infinite',
-        position: 'relative',
-      }}>
+        position: 'absolute', top: '50%', left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 200, height: 200, borderRadius: '50%',
+        background: 'rgba(255,26,26,0.15)',
+        filter: 'blur(60px)',
+        zIndex: 0, pointerEvents: 'none',
+      }} />
+
+      <div style={{ animation: 'phoneFloat 3s ease-in-out infinite', position: 'relative', zIndex: 1 }}>
         {/* iPhone frame */}
         <div style={{
-          width: 240,
-          height: 480,
+          width: 220, height: 440,
           background: '#0d0d0d',
           borderRadius: 40,
           border: '2px solid rgba(255,255,255,0.12)',
           boxShadow: '0 0 0 1px rgba(255,255,255,0.04), 0 40px 80px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(255,255,255,0.06)',
-          position: 'relative',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
+          position: 'relative', overflow: 'hidden',
+          display: 'flex', flexDirection: 'column',
         }}>
           {/* Notch */}
           <div style={{
             position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
-            width: 90, height: 26,
-            background: '#0d0d0d',
-            borderRadius: '0 0 18px 18px',
-            zIndex: 10,
+            width: 80, height: 24, background: '#0d0d0d',
+            borderRadius: '0 0 16px 16px', zIndex: 10,
             boxShadow: '0 1px 0 rgba(255,255,255,0.06)',
           }} />
 
-          {/* Screen content */}
+          {/* Screen */}
           <div style={{
             flex: 1,
-            background: 'linear-gradient(160deg, #1a0005 0%, #0a0a0a 50%, #0d0005 100%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '48px 20px 32px',
-            position: 'relative',
-            overflow: 'hidden',
+            background: 'linear-gradient(160deg, #1a0000 0%, #0d0d0d 100%)',
+            display: 'flex', flexDirection: 'column',
+            alignItems: 'center', justifyContent: 'center',
+            padding: '44px 18px 28px',
+            position: 'relative', overflow: 'hidden',
           }}>
-            {/* Red glow */}
+            {/* Screen red glow */}
             <div style={{
-              position: 'absolute',
-              top: '30%', left: '50%',
+              position: 'absolute', top: '30%', left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: 180, height: 180,
-              background: 'radial-gradient(circle, rgba(208,2,27,0.25) 0%, transparent 70%)',
+              width: 160, height: 160,
+              background: 'radial-gradient(circle, rgba(255,26,26,0.22) 0%, transparent 70%)',
               pointerEvents: 'none',
             }} />
 
             {/* Cine Hub label */}
             <span style={{
               fontFamily: "'Great Vibes', cursive",
-              color: '#D0021B',
-              fontSize: '1.1rem',
-              marginBottom: 16,
-              opacity: 0.9,
+              color: '#FF1A1A', fontSize: '1.2rem',
+              marginBottom: 14, opacity: 0.95, position: 'relative',
             }}>Cine Hub</span>
 
             {/* Main text */}
             <p style={{
               fontFamily: "'Cormorant Garamond', serif",
-              color: '#F0F0F0',
-              fontWeight: 700,
-              fontSize: '1.05rem',
-              textAlign: 'center',
-              lineHeight: 1.4,
-              marginBottom: 10,
-              letterSpacing: '0.3px',
+              color: '#F0F0F0', fontWeight: 700,
+              fontSize: '1rem', textAlign: 'center',
+              lineHeight: 1.4, marginBottom: 8,
+              letterSpacing: '0.3px', position: 'relative',
             }}>
               Reels Created &<br />Delivered On The Spot
             </p>
 
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
-              color: '#666',
-              fontSize: '0.7rem',
-              textAlign: 'center',
-              letterSpacing: '0.5px',
-              marginBottom: 32,
+              color: '#555', fontSize: '0.65rem',
+              textAlign: 'center', letterSpacing: '0.5px',
+              marginBottom: 28, position: 'relative',
             }}>
               Shot on iPhone • Delivered in 10 mins
             </p>
 
-            {/* Record button */}
-            <div style={{
-              width: 56, height: 56,
-              borderRadius: '50%',
-              border: '2.5px solid rgba(208,2,27,0.6)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              position: 'relative',
-            }}>
+            {/* Record button with pulse ring */}
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {/* Pulse ring */}
               <div style={{
-                width: 38, height: 38,
+                position: 'absolute', inset: -8,
                 borderRadius: '50%',
-                background: '#D0021B',
-                boxShadow: '0 0 20px rgba(208,2,27,0.5)',
+                border: '2px solid rgba(255,26,26,0.4)',
+                animation: 'recordPing 1.5s ease-out infinite',
               }} />
+              <div style={{
+                width: 52, height: 52, borderRadius: '50%',
+                border: '2.5px solid rgba(255,26,26,0.6)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>
+                <div style={{
+                  width: 34, height: 34, borderRadius: '50%',
+                  background: '#FF1A1A',
+                  boxShadow: '0 0 20px rgba(255,26,26,0.6)',
+                }} />
+              </div>
             </div>
           </div>
 
           {/* Home indicator */}
           <div style={{
-            height: 28,
-            background: '#0d0d0d',
+            height: 26, background: '#0d0d0d',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
           }}>
-            <div style={{ width: 80, height: 4, borderRadius: 9999, background: 'rgba(255,255,255,0.2)' }} />
+            <div style={{ width: 72, height: 4, borderRadius: 9999, background: 'rgba(255,255,255,0.2)' }} />
           </div>
         </div>
 
         {/* Side buttons */}
-        <div style={{ position: 'absolute', left: -3, top: 100, width: 3, height: 32, background: 'rgba(255,255,255,0.1)', borderRadius: '2px 0 0 2px' }} />
-        <div style={{ position: 'absolute', left: -3, top: 144, width: 3, height: 32, background: 'rgba(255,255,255,0.1)', borderRadius: '2px 0 0 2px' }} />
-        <div style={{ position: 'absolute', right: -3, top: 120, width: 3, height: 52, background: 'rgba(255,255,255,0.1)', borderRadius: '0 2px 2px 0' }} />
+        <div style={{ position: 'absolute', left: -3, top: 90, width: 3, height: 28, background: 'rgba(255,255,255,0.1)', borderRadius: '2px 0 0 2px' }} />
+        <div style={{ position: 'absolute', left: -3, top: 130, width: 3, height: 28, background: 'rgba(255,255,255,0.1)', borderRadius: '2px 0 0 2px' }} />
+        <div style={{ position: 'absolute', right: -3, top: 110, width: 3, height: 48, background: 'rgba(255,255,255,0.1)', borderRadius: '0 2px 2px 0' }} />
       </div>
     </div>
   );
@@ -149,28 +149,28 @@ export default function HeroSection() {
       <div style={{
         position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
         width: '80%', maxWidth: 900, height: 1,
-        background: 'linear-gradient(90deg, transparent, rgba(208,2,27,0.5), transparent)',
+        background: 'linear-gradient(90deg, transparent, rgba(255,26,26,0.5), transparent)',
         pointerEvents: 'none',
       }} />
 
       <div className="hero-inner" style={{
         width: '100%', maxWidth: 1200, margin: '0 auto', padding: '0 24px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        gap: 48, position: 'relative', zIndex: 1,
+        gap: 32, position: 'relative', zIndex: 1,
       }}>
 
-        {/* Left: text content */}
-        <div className="hero-text" style={{ flex: 1, minWidth: 0 }}>
+        {/* Left: text — 55% */}
+        <div className="hero-text" style={{ flex: '0 0 55%', maxWidth: '55%', paddingLeft: '5%' }}>
 
           {/* Eyebrow */}
-          <div className="reveal" style={{ marginBottom: 36 }}>
+          <div className="reveal" style={{ marginBottom: 32 }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
-              background: 'rgba(208,2,27,0.07)', border: '1px solid rgba(208,2,27,0.3)',
+              background: 'rgba(255,26,26,0.08)', border: '1px solid rgba(255,26,26,0.35)',
               borderRadius: 9999, padding: '9px 24px',
-              fontFamily: "'Great Vibes', cursive", color: '#D0021B', fontSize: '1.3rem',
+              fontFamily: "'Great Vibes', cursive", color: '#FF1A1A', fontSize: '1.3rem',
             }}>
-              <span className="red-dot-pulse" style={{ width: 7, height: 7, borderRadius: '50%', background: '#D0021B', flexShrink: 0, display: 'block' }} />
+              <span className="red-dot-pulse" style={{ width: 7, height: 7, borderRadius: '50%', background: '#FF1A1A', flexShrink: 0, display: 'block' }} />
               World's First Quick Content Service
             </span>
           </div>
@@ -178,28 +178,34 @@ export default function HeroSection() {
           {/* Sub-headline */}
           <p className="reveal delay-1 hero-sub" style={{
             fontFamily: "'Cormorant Garamond', serif",
-            color: 'rgba(240,240,240,0.5)',
-            fontWeight: 600,
-            fontSize: 'clamp(1.1rem, 2.2vw, 1.5rem)',
-            letterSpacing: '0.04em',
-            marginBottom: 12,
+            color: '#ffffff',
+            fontWeight: 500,
+            fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
+            letterSpacing: '1px',
+            marginBottom: 10,
           }}>
             We Shoot • Edit • Deliver Reels in
           </p>
 
           {/* Big headline */}
           <h1 className="reveal delay-2 hero-headline" style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontWeight: 400,
-            fontSize: 'clamp(5rem, 14vw, 11rem)',
-            color: '#D0021B',
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 900,
+            fontStyle: 'italic',
+            fontSize: 'clamp(5rem, 12vw, 10rem)',
+            color: '#FF1A1A',
             lineHeight: 0.9,
             marginBottom: 48,
-            textShadow: '0 0 100px rgba(208,2,27,0.2)',
-            letterSpacing: '2px',
+            textShadow: '0 0 80px rgba(255,26,26,0.5), 0 0 40px rgba(255,26,26,0.3)',
+            letterSpacing: '-1px',
           }}>
             10 Minutes
-            <sup style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(1.4rem, 2.5vw, 2.5rem)', position: 'relative', top: '-0.5em', letterSpacing: 0, opacity: 0.7 }}>*</sup>
+            <sup style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 'clamp(1.2rem, 2vw, 2rem)',
+              position: 'relative', top: '-0.5em',
+              letterSpacing: 0, opacity: 0.7, fontStyle: 'normal',
+            }}>*</sup>
           </h1>
 
           {/* Badges */}
@@ -214,7 +220,7 @@ export default function HeroSection() {
                 transition: 'border-color 0.25s, color 0.25s, background 0.25s',
                 cursor: 'default',
               }}
-                onMouseEnter={(e) => { const s = e.currentTarget as HTMLSpanElement; s.style.borderColor = 'rgba(208,2,27,0.35)'; s.style.color = '#D0D0D0'; s.style.background = 'rgba(208,2,27,0.05)'; }}
+                onMouseEnter={(e) => { const s = e.currentTarget as HTMLSpanElement; s.style.borderColor = 'rgba(255,26,26,0.35)'; s.style.color = '#D0D0D0'; s.style.background = 'rgba(255,26,26,0.05)'; }}
                 onMouseLeave={(e) => { const s = e.currentTarget as HTMLSpanElement; s.style.borderColor = 'rgba(255,255,255,0.09)'; s.style.color = '#888'; s.style.background = 'rgba(255,255,255,0.03)'; }}
               >
                 {b}
@@ -261,8 +267,10 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right: iPhone mockup */}
-        <IPhoneMockup />
+        {/* Right: iPhone mockup — 40% */}
+        <div style={{ flex: '0 0 40%', maxWidth: '40%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <IPhoneMockup />
+        </div>
       </div>
     </section>
   );
