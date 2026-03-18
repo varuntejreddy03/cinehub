@@ -20,14 +20,14 @@ export default function FeaturesSection() {
           <p className="section-sub">Built around your comfort, safety, and convenience.</p>
         </div>
 
-        <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 20, maxWidth: 900, margin: '0 auto' }}>
+        <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20, maxWidth: 860, margin: '0 auto' }}>
           {features.map((f, i) => (
             <div key={i} className={`ch-card reveal delay-${i + 1}`} style={{ padding: '32px 28px' }}>
               <div className="emoji-icon">{f.emoji}</div>
-              <h3 style={{ fontFamily: "'Playfair Display', serif", color: '#F2F2F2', fontWeight: 700, fontSize: '1.1rem', marginBottom: 10 }}>
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif", color: '#F2F2F2', fontWeight: 700, fontSize: '1.1rem', marginBottom: 10 }}>
                 {f.title}
               </h3>
-              <p style={{ fontFamily: "'Inter', sans-serif", color: '#888', fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#888', fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>
                 {f.description}
               </p>
             </div>

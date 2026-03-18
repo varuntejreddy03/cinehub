@@ -11,10 +11,10 @@ export default function CineHubLogo({ scale = 1 }: CineHubLogoProps) {
     <div style={{ display: 'inline-flex', flexDirection: 'column', lineHeight: 1, userSelect: 'none', gap: 1 }}>
       {/* "We Are" — Dancing Script, red */}
       <span style={{
-        fontFamily: "'Dancing Script', cursive",
+        fontFamily: "'Great Vibes', cursive",
         color: '#D0021B',
         fontSize: base * 0.62,
-        fontWeight: 700,
+        fontWeight: 400,
         lineHeight: 1.15,
         letterSpacing: '0.02em',
       }}>
@@ -23,11 +23,11 @@ export default function CineHubLogo({ scale = 1 }: CineHubLogoProps) {
 
       {/* "CINE [reel] HUB" — Playfair Display, white */}
       <span style={{
-        fontFamily: "'Playfair Display', Georgia, serif",
+        fontFamily: "'Cormorant Garamond', Georgia, serif",
         color: '#F0F0F0',
         fontSize: base,
-        fontWeight: 700,
-        letterSpacing: '0.18em',
+        fontWeight: 900,
+        letterSpacing: '3px',
         lineHeight: 1,
         display: 'inline-flex',
         alignItems: 'center',

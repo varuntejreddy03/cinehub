@@ -33,9 +33,10 @@
   --input:              var(--bg-alt);
   --ring:               var(--color-red);
 
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-script:  'Dancing Script', cursive;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-script:  'Great Vibes', cursive;
+  --font-body:    'DM Sans', system-ui, sans-serif;
 }
 
 /* ─── Base ───────────────────────────────────────────────── */
@@ -56,6 +57,11 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--color-white);
   letter-spacing: -0.5px;
   line-height: 1.15;
+}
+
+@keyframes phoneFloat {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
 }
 
 /* ─── Background animated particles ─────────────────────── */
@@ -238,7 +244,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.85rem;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: 9999px;
   padding: 15px 38px;
@@ -270,7 +276,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.78rem;
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(240,240,240,0.55);
   transition: color 0.25s;
@@ -344,6 +350,11 @@ h1,h2,h3,h4,h5,h6 {
   0%,100% { opacity: 0.6; }
   50%      { opacity: 1; }
 }
+
+/* ─── Footer blank space fix ──────────────────────────────── */
+html, body { height: 100%; }
+#root { display: flex; flex-direction: column; min-height: 100vh; }
+footer { margin-top: auto; padding-bottom: 32px; }
 
 /* ─── Scrollbar ──────────────────────────────────────────── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }

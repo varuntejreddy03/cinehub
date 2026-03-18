@@ -37,15 +37,17 @@ export default function NavBar() {
               <CineHubLogo scale={1} />
             </a>
 
-            {/* Desktop nav */}
-            <div className="hidden md:flex" style={{ alignItems: 'center', gap: 36 }}>
-              {navLinks.map(({ href, label }) => (
-                <a key={label} href={href} className="nav-link" style={{ textDecoration: 'none' }}>{label}</a>
-              ))}
+            {/* Desktop nav — hidden on mobile via CSS */}
+            <div className="nav-desktop-links" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
+                {navLinks.map(({ href, label }) => (
+                  <a key={label} href={href} className="nav-link" style={{ textDecoration: 'none' }}>{label}</a>
+                ))}
+              </div>
               <button
                 onClick={() => window.open(WA_ENQUIRE, '_blank')}
                 className="btn-primary"
-                style={{ padding: '11px 28px', fontSize: '0.78rem', letterSpacing: '1.2px' }}
+                style={{ padding: '11px 28px', fontSize: '0.78rem', letterSpacing: '1.2px', marginLeft: 24 }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 0 24px rgba(208,2,27,0.5), 0 6px 28px rgba(208,2,27,0.4)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 4px 28px rgba(208,2,27,0.4), inset 0 1px 0 rgba(255,255,255,0.1)'; }}
               >
@@ -53,9 +55,8 @@ export default function NavBar() {
               </button>
             </div>
 
-            {/* Mobile hamburger */}
+            {/* Mobile hamburger — hidden on desktop */}
             <button
-              className="md:hidden"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
               style={{
@@ -66,6 +67,7 @@ export default function NavBar() {
                 gap: 5, alignItems: 'center', justifyContent: 'center',
                 minHeight: 44, minWidth: 44,
               }}
+              className="mobile-hamburger"
             >
               <span style={{ display: 'block', width: 20, height: 2, background: '#F0F0F0', borderRadius: 2 }} />
               <span style={{ display: 'block', width: 14, height: 2, background: '#F0F0F0', borderRadius: 2 }} />
