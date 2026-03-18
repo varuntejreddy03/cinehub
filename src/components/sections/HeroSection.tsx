@@ -4,38 +4,34 @@ const WA_BOOK = "https://wa.me/917702521717?text=Hi%20Cine%20Hub%2C%20I%20want%2
 
 function IPhoneMockup() {
   return (
-    <div className="hero-iphone" style={{
-      maxWidth: 280, width: '100%', margin: '0 auto',
-      paddingRight: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
-      flexShrink: 0, position: 'relative',
-    }}>
-      {/* Red glow behind phone */}
+    <div className="hero-iphone" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      {/* Glow behind phone */}
       <div style={{
         position: 'absolute', top: '50%', left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 200, height: 200, borderRadius: '50%',
-        background: 'rgba(255,26,26,0.15)',
+        transform: 'translate(-50%,-50%)',
+        width: 220, height: 220, borderRadius: '50%',
+        background: 'rgba(255,26,26,0.12)',
         filter: 'blur(60px)',
-        zIndex: 0, pointerEvents: 'none',
+        pointerEvents: 'none', zIndex: 0,
       }} />
 
+      {/* Floating phone */}
       <div style={{ animation: 'phoneFloat 3s ease-in-out infinite', position: 'relative', zIndex: 1 }}>
-        {/* iPhone frame */}
+        {/* Frame */}
         <div style={{
-          width: 220, height: 440,
-          background: '#0d0d0d',
-          borderRadius: 40,
-          border: '2px solid rgba(255,255,255,0.12)',
-          boxShadow: '0 0 0 1px rgba(255,255,255,0.04), 0 40px 80px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(255,255,255,0.06)',
+          width: 210, height: 430,
+          background: '#111',
+          borderRadius: 38,
+          border: '2px solid rgba(255,255,255,0.1)',
+          boxShadow: '0 32px 64px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.05)',
           position: 'relative', overflow: 'hidden',
           display: 'flex', flexDirection: 'column',
         }}>
           {/* Notch */}
           <div style={{
             position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
-            width: 80, height: 24, background: '#0d0d0d',
-            borderRadius: '0 0 16px 16px', zIndex: 10,
-            boxShadow: '0 1px 0 rgba(255,255,255,0.06)',
+            width: 76, height: 22, background: '#111',
+            borderRadius: '0 0 14px 14px', zIndex: 10,
           }} />
 
           {/* Screen */}
@@ -44,81 +40,77 @@ function IPhoneMockup() {
             background: 'linear-gradient(160deg, #1a0000 0%, #0d0d0d 100%)',
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center',
-            padding: '44px 18px 28px',
+            padding: '42px 16px 24px',
             position: 'relative', overflow: 'hidden',
           }}>
-            {/* Screen red glow */}
+            {/* Screen glow */}
             <div style={{
-              position: 'absolute', top: '30%', left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: 160, height: 160,
-              background: 'radial-gradient(circle, rgba(255,26,26,0.22) 0%, transparent 70%)',
+              position: 'absolute', top: '35%', left: '50%',
+              transform: 'translate(-50%,-50%)',
+              width: 150, height: 150,
+              background: 'radial-gradient(circle, rgba(255,26,26,0.2) 0%, transparent 70%)',
               pointerEvents: 'none',
             }} />
 
-            {/* Cine Hub label */}
             <span style={{
               fontFamily: "'Great Vibes', cursive",
-              color: '#FF1A1A', fontSize: '1.2rem',
-              marginBottom: 14, opacity: 0.95, position: 'relative',
+              color: '#FF1A1A', fontSize: '1.15rem',
+              marginBottom: 12, position: 'relative',
             }}>Cine Hub</span>
 
-            {/* Main text */}
             <p style={{
               fontFamily: "'Cormorant Garamond', serif",
               color: '#F0F0F0', fontWeight: 700,
-              fontSize: '1rem', textAlign: 'center',
-              lineHeight: 1.4, marginBottom: 8,
-              letterSpacing: '0.3px', position: 'relative',
+              fontSize: '0.95rem', textAlign: 'center',
+              lineHeight: 1.45, marginBottom: 8,
+              position: 'relative',
             }}>
               Reels Created &<br />Delivered On The Spot
             </p>
 
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
-              color: '#555', fontSize: '0.65rem',
-              textAlign: 'center', letterSpacing: '0.5px',
+              color: '#555', fontSize: '0.62rem',
+              textAlign: 'center', letterSpacing: '0.4px',
               marginBottom: 28, position: 'relative',
             }}>
               Shot on iPhone • Delivered in 10 mins
             </p>
 
-            {/* Record button with pulse ring */}
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {/* Pulse ring */}
+            {/* Record button */}
+            <div style={{ position: 'relative', width: 56, height: 56, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{
-                position: 'absolute', inset: -8,
-                borderRadius: '50%',
-                border: '2px solid rgba(255,26,26,0.4)',
+                position: 'absolute', inset: -6, borderRadius: '50%',
+                border: '2px solid rgba(255,26,26,0.35)',
                 animation: 'recordPing 1.5s ease-out infinite',
               }} />
               <div style={{
                 width: 52, height: 52, borderRadius: '50%',
-                border: '2.5px solid rgba(255,26,26,0.6)',
+                border: '2px solid rgba(255,26,26,0.5)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>
                 <div style={{
                   width: 34, height: 34, borderRadius: '50%',
                   background: '#FF1A1A',
-                  boxShadow: '0 0 20px rgba(255,26,26,0.6)',
+                  boxShadow: '0 0 18px rgba(255,26,26,0.55)',
                 }} />
               </div>
             </div>
           </div>
 
-          {/* Home indicator */}
+          {/* Home bar */}
           <div style={{
-            height: 26, background: '#0d0d0d',
+            height: 24, background: '#111',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
           }}>
-            <div style={{ width: 72, height: 4, borderRadius: 9999, background: 'rgba(255,255,255,0.2)' }} />
+            <div style={{ width: 68, height: 3, borderRadius: 9999, background: 'rgba(255,255,255,0.18)' }} />
           </div>
         </div>
 
         {/* Side buttons */}
-        <div style={{ position: 'absolute', left: -3, top: 90, width: 3, height: 28, background: 'rgba(255,255,255,0.1)', borderRadius: '2px 0 0 2px' }} />
-        <div style={{ position: 'absolute', left: -3, top: 130, width: 3, height: 28, background: 'rgba(255,255,255,0.1)', borderRadius: '2px 0 0 2px' }} />
-        <div style={{ position: 'absolute', right: -3, top: 110, width: 3, height: 48, background: 'rgba(255,255,255,0.1)', borderRadius: '0 2px 2px 0' }} />
+        <div style={{ position: 'absolute', left: -3, top: 88,  width: 3, height: 26, background: 'rgba(255,255,255,0.08)', borderRadius: '2px 0 0 2px' }} />
+        <div style={{ position: 'absolute', left: -3, top: 124, width: 3, height: 26, background: 'rgba(255,255,255,0.08)', borderRadius: '2px 0 0 2px' }} />
+        <div style={{ position: 'absolute', right: -3, top: 106, width: 3, height: 46, background: 'rgba(255,255,255,0.08)', borderRadius: '0 2px 2px 0' }} />
       </div>
     </div>
   );
@@ -132,7 +124,9 @@ export default function HeroSection() {
     if (!el) return;
     const targets = el.querySelectorAll<HTMLElement>('.reveal');
     const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { (e.target as HTMLElement).classList.add('visible'); obs.unobserve(e.target); } });
+      entries.forEach((e) => {
+        if (e.isIntersecting) { (e.target as HTMLElement).classList.add('visible'); obs.unobserve(e.target); }
+      });
     }, { threshold: 0.05 });
     targets.forEach((t) => obs.observe(t));
     return () => obs.disconnect();
@@ -141,134 +135,141 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} style={{
       minHeight: '100vh',
+      background: '#0d0d0d',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       position: 'relative', paddingTop: 90, paddingBottom: 60,
       overflow: 'hidden',
     }}>
-      {/* Top glow line */}
+      {/* Single subtle red glow */}
       <div style={{
-        position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
-        width: '80%', maxWidth: 900, height: 1,
-        background: 'linear-gradient(90deg, transparent, rgba(255,26,26,0.5), transparent)',
-        pointerEvents: 'none',
+        position: 'absolute', inset: 0, pointerEvents: 'none',
+        background: 'radial-gradient(ellipse at 30% 50%, rgba(255,26,26,0.07) 0%, transparent 60%)',
       }} />
 
+      {/* Two-column inner */}
       <div className="hero-inner" style={{
-        width: '100%', maxWidth: 1200, margin: '0 auto', padding: '0 24px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        gap: 32, position: 'relative', zIndex: 1,
+        width: '100%', maxWidth: 1200, margin: '0 auto',
+        padding: '0 32px',
+        display: 'flex', alignItems: 'center',
+        gap: 40, position: 'relative', zIndex: 1,
       }}>
 
-        {/* Left: text — 55% */}
-        <div className="hero-text" style={{ flex: '0 0 55%', maxWidth: '55%', paddingLeft: '5%' }}>
+        {/* ── LEFT: text ── */}
+        <div className="hero-text" style={{ flex: '0 0 58%', maxWidth: '58%', paddingLeft: '3%' }}>
 
-          {/* Eyebrow */}
-          <div className="reveal" style={{ marginBottom: 32 }}>
+          {/* Eyebrow badge */}
+          <div className="reveal" style={{ marginBottom: 28 }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
-              background: 'rgba(255,26,26,0.08)', border: '1px solid rgba(255,26,26,0.35)',
-              borderRadius: 9999, padding: '9px 24px',
-              fontFamily: "'Great Vibes', cursive", color: '#FF1A1A', fontSize: '1.3rem',
+              background: 'transparent',
+              border: '1.5px solid #FF1A1A',
+              borderRadius: 9999, padding: '8px 20px',
+              fontFamily: "'DM Sans', sans-serif",
+              color: '#ffffff', fontSize: '0.78rem',
+              fontStyle: 'normal', fontWeight: 500,
+              letterSpacing: '1.5px', textTransform: 'uppercase',
             }}>
-              <span className="red-dot-pulse" style={{ width: 7, height: 7, borderRadius: '50%', background: '#FF1A1A', flexShrink: 0, display: 'block' }} />
+              <span style={{
+                width: 7, height: 7, borderRadius: '50%',
+                background: '#FF1A1A', flexShrink: 0, display: 'block',
+                animation: 'redPulse 2s ease-in-out infinite',
+              }} />
               World's First Quick Content Service
             </span>
           </div>
 
           {/* Sub-headline */}
-          <p className="reveal delay-1 hero-sub" style={{
+          <p className="reveal delay-1" style={{
             fontFamily: "'Cormorant Garamond', serif",
-            color: '#ffffff',
-            fontWeight: 500,
-            fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
-            letterSpacing: '1px',
-            marginBottom: 10,
+            color: '#ffffff', fontWeight: 500,
+            fontSize: 'clamp(1rem, 2vw, 1.35rem)',
+            letterSpacing: '1px', marginBottom: 8,
           }}>
             We Shoot • Edit • Deliver Reels in
           </p>
 
-          {/* Big headline */}
-          <h1 className="reveal delay-2 hero-headline" style={{
+          {/* "10 Minutes" — one line, no wrap */}
+          <h1 className="reveal delay-2" style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 900,
-            fontStyle: 'italic',
-            fontSize: 'clamp(5rem, 12vw, 10rem)',
+            fontStyle: 'normal',
+            fontSize: 'clamp(3.2rem, 8.5vw, 8rem)',
             color: '#FF1A1A',
-            lineHeight: 0.9,
-            marginBottom: 48,
+            lineHeight: 1,
+            whiteSpace: 'nowrap',
+            marginBottom: 40,
             textShadow: '0 0 80px rgba(255,26,26,0.5), 0 0 40px rgba(255,26,26,0.3)',
             letterSpacing: '-1px',
           }}>
             10 Minutes
             <sup style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(1.2rem, 2vw, 2rem)',
-              position: 'relative', top: '-0.5em',
-              letterSpacing: 0, opacity: 0.7, fontStyle: 'normal',
+              fontSize: 'clamp(1rem, 1.8vw, 1.8rem)',
+              position: 'relative', top: '-0.55em',
+              letterSpacing: 0, opacity: 0.65, fontStyle: 'normal', fontWeight: 400,
             }}>*</sup>
           </h1>
 
-          {/* Badges */}
-          <div className="reveal delay-3 hero-badges" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 48 }}>
+          {/* Trust badges */}
+          <div className="reveal delay-3" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 40 }}>
             {['🕐 24/7 Available', '✅ ISO Certified', "📍 Vijayawada's #1"].map((b) => (
               <span key={b} style={{
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.09)',
-                borderRadius: 9999, padding: '8px 20px',
-                fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem',
-                color: '#888', letterSpacing: '0.3px',
+                borderRadius: 9999, padding: '7px 18px',
+                fontFamily: "'DM Sans', sans-serif", fontSize: '0.76rem',
+                color: '#888', letterSpacing: '0.3px', cursor: 'default',
                 transition: 'border-color 0.25s, color 0.25s, background 0.25s',
-                cursor: 'default',
               }}
-                onMouseEnter={(e) => { const s = e.currentTarget as HTMLSpanElement; s.style.borderColor = 'rgba(255,26,26,0.35)'; s.style.color = '#D0D0D0'; s.style.background = 'rgba(255,26,26,0.05)'; }}
+                onMouseEnter={(e) => { const s = e.currentTarget as HTMLSpanElement; s.style.borderColor = 'rgba(255,26,26,0.35)'; s.style.color = '#ccc'; s.style.background = 'rgba(255,26,26,0.05)'; }}
                 onMouseLeave={(e) => { const s = e.currentTarget as HTMLSpanElement; s.style.borderColor = 'rgba(255,255,255,0.09)'; s.style.color = '#888'; s.style.background = 'rgba(255,255,255,0.03)'; }}
-              >
-                {b}
-              </span>
+              >{b}</span>
             ))}
           </div>
 
           {/* CTAs */}
-          <div className="reveal delay-4 hero-ctas" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 16, marginBottom: 80 }}>
-            <button onClick={() => window.open(WA_BOOK, '_blank')} className="btn-primary" style={{ fontSize: '0.85rem', padding: '16px 44px' }}>
+          <div className="reveal delay-4 hero-ctas" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14, marginBottom: 64 }}>
+            <button onClick={() => window.open(WA_BOOK, '_blank')} className="btn-primary" style={{ fontSize: '0.82rem', padding: '15px 40px' }}>
               Book Now
             </button>
             <button
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               style={{
-                background: 'transparent', border: '1.5px solid rgba(255,255,255,0.25)',
-                borderRadius: 9999, padding: '16px 44px',
-                color: 'rgba(240,240,240,0.7)', fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 700, fontSize: '0.85rem', letterSpacing: '1.2px',
+                background: 'transparent', border: '1.5px solid rgba(255,255,255,0.22)',
+                borderRadius: 9999, padding: '15px 40px',
+                color: 'rgba(240,240,240,0.65)', fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600, fontSize: '0.82rem', letterSpacing: '1.2px',
                 textTransform: 'uppercase', cursor: 'pointer',
-                transition: 'border-color 0.3s, color 0.3s, background 0.3s, transform 0.25s',
+                transition: 'all 0.25s',
               }}
-              onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = 'rgba(255,255,255,0.6)'; b.style.color = '#F0F0F0'; b.style.background = 'rgba(255,255,255,0.04)'; b.style.transform = 'scale(1.03) translateY(-1px)'; }}
-              onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = 'rgba(255,255,255,0.25)'; b.style.color = 'rgba(240,240,240,0.7)'; b.style.background = 'transparent'; b.style.transform = 'scale(1) translateY(0)'; }}
+              onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = 'rgba(255,255,255,0.55)'; b.style.color = '#F0F0F0'; b.style.background = 'rgba(255,255,255,0.04)'; }}
+              onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = 'rgba(255,255,255,0.22)'; b.style.color = 'rgba(240,240,240,0.65)'; b.style.background = 'transparent'; }}
             >
               View Packages
             </button>
           </div>
 
-          {/* Shimmer + trust badges */}
-          <div className="reveal delay-5" style={{ marginBottom: 32 }}>
+          {/* Shimmer divider */}
+          <div className="reveal delay-5" style={{ marginBottom: 28 }}>
             <div className="shimmer-line" />
           </div>
-          <div className="reveal delay-6" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 32 }}>
+
+          {/* Bottom trust row */}
+          <div className="reveal delay-6" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
             {[{ icon: '⚡', text: '10-Min Delivery' }, { icon: '🎬', text: 'Pro Cinematographers' }, { icon: '📍', text: 'Based in Vijayawada' }].map(({ icon, text }, i) => (
-              <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-                {i > 0 && <div style={{ width: 1, height: 32, background: 'rgba(255,255,255,0.07)' }} />}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <span style={{ fontSize: '1.2rem' }}>{icon}</span>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", color: '#666', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 500 }}>{text}</span>
+              <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
+                {i > 0 && <div style={{ width: 1, height: 28, background: 'rgba(255,255,255,0.07)' }} />}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ fontSize: '1.1rem' }}>{icon}</span>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", color: '#555', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '1.4px', fontWeight: 500 }}>{text}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right: iPhone mockup — 40% */}
-        <div style={{ flex: '0 0 40%', maxWidth: '40%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {/* ── RIGHT: iPhone ── */}
+        <div style={{ flex: '0 0 42%', maxWidth: '42%', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingRight: 24 }}>
           <IPhoneMockup />
         </div>
       </div>
