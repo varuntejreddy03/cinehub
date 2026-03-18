@@ -183,7 +183,7 @@ export default function HeroSection() {
             fontFamily: "'Cormorant Garamond', serif",
             color: '#ffffff', fontWeight: 500,
             fontSize: 'clamp(1rem, 2vw, 1.35rem)',
-            letterSpacing: '1px', marginBottom: 8,
+            letterSpacing: '1px', marginBottom: 4,
           }}>
             We Shoot • Edit • Deliver Reels in
           </p>
@@ -193,15 +193,23 @@ export default function HeroSection() {
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 900,
             fontStyle: 'normal',
-            fontSize: 'clamp(3.2rem, 8.5vw, 8rem)',
+            fontSize: 'clamp(4rem, 10vw, 9.5rem)',
             color: '#FF1A1A',
             lineHeight: 1,
             whiteSpace: 'nowrap',
             marginBottom: 40,
             textShadow: '0 0 80px rgba(255,26,26,0.5), 0 0 40px rgba(255,26,26,0.3)',
-            letterSpacing: '-1px',
+            letterSpacing: '-2px',
           }}>
-            10 Minutes
+            <span style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: 'clamp(5rem, 13vw, 12rem)',
+              fontWeight: 400,
+              letterSpacing: '-2px',
+              lineHeight: 1,
+              display: 'inline',
+            }}>10</span>
+            {' '}Minutes
             <sup style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(1rem, 1.8vw, 1.8rem)',
@@ -269,7 +277,7 @@ export default function HeroSection() {
         </div>
 
         {/* ── RIGHT: iPhone ── */}
-        <div style={{ flex: '0 0 42%', maxWidth: '42%', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingRight: 24 }}>
+        <div style={{ flex: '0 0 42%', maxWidth: '42%', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingRight: 0, paddingLeft: 40 }}>
           <IPhoneMockup />
         </div>
       </div>
