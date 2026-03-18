@@ -8,9 +8,10 @@ const services = [
   { emoji: '👩', title: 'Female Cinematographer', description: 'Female clients can request a female cinematographer for comfort and safety.' },
   { emoji: '🕐', title: '24/7 Availability',      description: "We're available around the clock — book anytime, shoot anytime." },
   { emoji: '🔒', title: 'Data Safe & Secure',     description: 'Your videos, personal details, and payments are fully encrypted and protected.' },
+  { emoji: '👩‍🦺', title: 'Woman Safety First',     description: 'Women can exclusively book a verified female reel maker for a safe and comfortable shoot experience.' },
 ];
 
-const delays = ['delay-1','delay-2','delay-3','delay-4','delay-5','delay-6','delay-6'];
+const delays = ['delay-1','delay-2','delay-3','delay-4','delay-5','delay-6','delay-6','delay-6'];
 
 export default function WhyChooseUs() {
   const ref = useReveal();
@@ -25,14 +26,14 @@ export default function WhyChooseUs() {
           <p className="section-sub">Everything you need for professional reel creation, delivered fast.</p>
         </div>
 
-        <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, justifyItems: 'center' }}>
+        <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>
           {services.map((s, i) => (
-            <div key={i} className={`ch-card reveal ${delays[i]}`} style={{ padding: '28px 24px' }}>
+            <div key={i} className={`ch-card reveal ${delays[i]}`} style={{ padding: '28px 24px', width: '100%' }}>
               <div className="emoji-icon">{s.emoji}</div>
-              <h3 style={{ fontFamily: "'Cormorant Garamond', serif", color: '#F2F2F2', fontWeight: 700, fontSize: '1.1rem', marginBottom: 10 }}>
+              <h3 style={{ fontFamily: "'DM Sans', sans-serif", color: '#ffffff', fontWeight: 600, fontSize: '1rem', marginBottom: 10 }}>
                 {s.title}
               </h3>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#888', fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#999', fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>
                 {s.description}
               </p>
             </div>

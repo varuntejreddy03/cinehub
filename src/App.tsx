@@ -24,7 +24,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ background: '#0a0a0a', minHeight: '100vh', position: 'relative' }}>
+    <div style={{ background: '#0a0a0a', position: 'relative' }}>
 
       {/* Animated background */}
       <ParticleCanvas />

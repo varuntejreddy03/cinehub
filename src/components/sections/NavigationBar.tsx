@@ -33,7 +33,7 @@ export default function NavBar() {
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
 
-            <a href="/" aria-label="Cine Hub Home" style={{ textDecoration: 'none' }}>
+            <a href="/" aria-label="Cine O Hub Home" style={{ textDecoration: 'none' }}>
               <CineHubLogo scale={1} />
             </a>
 
@@ -107,10 +107,11 @@ export default function NavBar() {
           </div>
 
           <p style={{ position: 'absolute', bottom: 32, fontFamily: "'Inter', sans-serif", color: '#333', fontSize: '0.75rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
-            Cine Hub · Vijayawada
+            Cine O Hub · Vijayawada
           </p>
         </div>
       )}
     </>
   );
 }
+

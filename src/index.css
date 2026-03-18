@@ -143,40 +143,44 @@ h1,h2,h3,h4,h5,h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-script);
-  color: var(--color-red);
-  font-size: 1.05rem;
-  font-weight: 700;
-  background: rgba(208,2,27,0.07);
-  border: 1px solid rgba(208,2,27,0.22);
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FF1A1A;
+  background: rgba(255,26,26,0.08);
+  border: 1px solid rgba(255,26,26,0.3);
   border-radius: 9999px;
-  padding: 5px 20px;
+  padding: 5px 16px;
   margin-bottom: 18px;
 }
 .eyebrow-pill::before {
   content: '';
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--color-red);
+  background: #FF1A1A;
   flex-shrink: 0;
   animation: redPulse 2s ease-in-out infinite;
 }
 
 /* ─── Section title ──────────────────────────────────────── */
 .section-title {
-  font-family: var(--font-heading);
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  color: var(--color-white);
-  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
-  letter-spacing: -1px;
+  font-style: normal;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  letter-spacing: -0.5px;
   line-height: 1.12;
 }
-.section-title span { color: var(--color-red); }
+.section-title span { color: #FF1A1A; }
 
 .section-sub {
-  font-family: var(--font-body);
-  color: var(--color-muted);
-  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  color: #999;
+  font-size: 0.9rem;
   max-width: 500px;
   margin: 14px auto 0;
   line-height: 1.75;
@@ -356,10 +360,10 @@ h1,h2,h3,h4,h5,h6 {
   50%      { opacity: 1; }
 }
 
-/* ─── Footer blank space fix ──────────────────────────────── */
-html, body { height: 100%; }
-#root { display: flex; flex-direction: column; min-height: 100vh; }
-footer { margin-top: auto; padding-bottom: 32px; }
+/* ─── Layout fix ─────────────────────────────────────────── */
+html, body { height: auto; min-height: unset; overflow-x: hidden; }
+main, #root { height: auto; min-height: unset; }
+footer { margin-top: 0; padding-top: 0; padding-bottom: 32px; }
 
 /* ─── Scrollbar ──────────────────────────────────────────── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }

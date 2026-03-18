@@ -4,19 +4,20 @@ interface CineHubLogoProps {
 }
 
 export default function CineHubLogo({ scale = 1 }: CineHubLogoProps) {
-  const base = 22 * scale;          // font-size of CINE HUB text (px)
+  const base = 22 * scale;          // font-size of Cine Hub text (px)
   const reelSize = base * 1.18;     // diameter of the reel circle
 
   return (
     <div style={{ display: 'inline-flex', flexDirection: 'column', lineHeight: 1, userSelect: 'none', gap: 1 }}>
-      {/* "We Are" — Dancing Script, red */}
+      {/* "We Are" — DM Sans, red, clean */}
       <span style={{
-        fontFamily: "'Great Vibes', cursive",
+        fontFamily: "'DM Sans', sans-serif",
         color: '#D0021B',
-        fontSize: base * 0.62,
-        fontWeight: 400,
-        lineHeight: 1.15,
-        letterSpacing: '0.02em',
+        fontSize: base * 0.52,
+        fontWeight: 500,
+        lineHeight: 1.2,
+        letterSpacing: '2px',
+        textTransform: 'uppercase',
       }}>
         We Are
       </span>
@@ -74,3 +75,5 @@ export default function CineHubLogo({ scale = 1 }: CineHubLogoProps) {
     </div>
   );
 }
+
+

@@ -3,9 +3,9 @@ import { useReveal } from '@/hooks/useReveal';
 interface Testimonial { id: number; text: string; name: string; role: string; image: string; }
 
 const testimonials: Testimonial[] = [
-  { id: 1, text: 'Cine Hub made booking a cinematographer super easy! Great service, skilled creators, and stunning reels. Highly recommend!', name: 'Srikari Galigari',  role: 'Wedding Client',   image: 'https://www.flashoot.com/assets/Srikari-BBlbe1Nx.jpg' },
-  { id: 2, text: 'Cine Hub is a game-changer! Quick booking, talented cinematographers, and amazing event coverage. Loved the experience!',   name: 'Lanka Pravallika', role: 'Event Organiser',  image: 'https://www.flashoot.com/assets/Pravallika-BDPEbDkj.jpg' },
-  { id: 3, text: 'Seamless booking, professional creators, and stunning reels! Cine Hub made capturing memories effortless and fun.',          name: 'Abhiram Kukunuri', role: 'Brand Shoot',      image: 'https://www.flashoot.com/assets/Abhiram-DB4yJA3y.jpg' },
+  { id: 1, text: 'Cine O Hub made booking a cinematographer super easy! Great service, skilled creators, and stunning reels. Highly recommend!', name: 'Srikari Galigari',  role: 'Wedding Client',   image: 'https://www.flashoot.com/assets/Srikari-BBlbe1Nx.jpg' },
+  { id: 2, text: 'Cine O Hub is a game-changer! Quick booking, talented cinematographers, and amazing event coverage. Loved the experience!',   name: 'Lanka Pravallika', role: 'Event Organiser',  image: 'https://www.flashoot.com/assets/Pravallika-BDPEbDkj.jpg' },
+  { id: 3, text: 'Seamless booking, professional creators, and stunning reels! Cine O Hub made capturing memories effortless and fun.',          name: 'Abhiram Kukunuri', role: 'Brand Shoot',      image: 'https://www.flashoot.com/assets/Abhiram-DB4yJA3y.jpg' },
 ];
 
 function Stars() {
@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
           <span className="eyebrow-pill">Testimonials</span>
           <h2 className="section-title">What Our <span>Customers Say</span></h2>
-          <p className="section-sub">Join thousands of satisfied customers who trust Cine Hub</p>
+          <p className="section-sub">Join thousands of satisfied customers who trust Cine O Hub</p>
         </div>
 
         <div className="testimonials-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24, maxWidth: 1020, margin: '0 auto' }}>
@@ -93,3 +93,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

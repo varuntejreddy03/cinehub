@@ -4,22 +4,22 @@ const plans = [
   {
     name: 'Basic Plan', subtitle: 'Quick & Clean', price: '₹1,999', popular: false, wedding: false,
     waText: "Hi%20Cine%20Hub%2C%20I%27m%20interested%20in%20the%20Basic%20package!",
-    features: ['1 Hour Shoot', '1 Edited Reel Delivered', 'Fast Delivery (10 mins post shoot)', 'Trained Cinematographer', 'Cine Hub Branding Included'],
+    features: ['1 Hour Shoot', '1 Edited Reel Delivered', 'Fast Delivery (10 mins post shoot)', 'Trained Cinematographer', 'Cine O Hub Branding Included'],
   },
   {
     name: 'Gold Plan', subtitle: 'Event Essential', price: '₹4,999', popular: true, wedding: false,
     waText: "Hi%20Cine%20Hub%2C%20I%27m%20interested%20in%20the%20Gold%20package!",
-    features: ['Up to 3 Hours Shoot', '3 Edited Reels Delivered', 'Fast Delivery (10 mins post shoot)', 'Trained Cinematographer', 'Cine Hub Branding Included', 'Priority Support'],
+    features: ['Up to 3 Hours Shoot', '3 Edited Reels Delivered', 'Fast Delivery (10 mins post shoot)', 'Trained Cinematographer', 'Cine O Hub Branding Included', 'Priority Support'],
   },
   {
     name: 'Platinum Plan', subtitle: 'Full Coverage', price: '₹9,999', popular: false, wedding: false,
     waText: "Hi%20Cine%20Hub%2C%20I%27m%20interested%20in%20the%20Platinum%20package!",
-    features: ['8 Hours Shoot', '8 Edited Reels Delivered', 'Fast Delivery (10 mins post shoot)', 'Senior Cinematographer', 'Cine Hub Branding Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
+    features: ['8 Hours Shoot', '8 Edited Reels Delivered', 'Fast Delivery (10 mins post shoot)', 'Senior Cinematographer', 'Cine O Hub Branding Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
   },
   {
     name: 'Wedding Package', subtitle: 'For Your Special Day', price: '₹12,999', popular: false, wedding: true,
     waText: "Hi%20Cine%20Hub%2C%20I%27m%20interested%20in%20the%20Wedding%20package!",
-    features: ['1 Edited Reel Delivered', '8 Hours Coverage', 'Trained Cinematographer', 'Cine Hub Branding Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
+    features: ['1 Edited Reel Delivered', '8 Hours Coverage', 'Trained Cinematographer', 'Cine O Hub Branding Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
   },
 ];
 
@@ -115,15 +115,15 @@ export default function BestsellersPricing() {
                 {plan.name}
               </h3>
               <p style={{
-                fontFamily: "'Great Vibes', cursive",
+                fontFamily: "'DM Sans', sans-serif",
                 color: plan.wedding ? '#D4AF37' : '#D0021B',
-                fontSize: '1.1rem', marginBottom: 22, opacity: 0.9,
+                fontSize: '0.9rem', fontWeight: 500, marginBottom: 22, opacity: 0.9,
               }}>
                 "{plan.subtitle}"
               </p>
 
               <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 28 }}>
-                <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 900, fontSize: '2.6rem', color: plan.wedding ? '#D4AF37' : '#D0021B', lineHeight: 1 }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '2.4rem', color: plan.wedding ? '#D4AF37' : '#FF1A1A', lineHeight: 1 }}>
                   {plan.price}
                 </span>
                 <span style={{ fontFamily: "'DM Sans', sans-serif", color: '#555', fontSize: '0.85rem' }}>+ GST</span>
@@ -154,18 +154,8 @@ export default function BestsellersPricing() {
               ) : plan.wedding ? (
                 <button
                   onClick={() => window.open(`https://wa.me/917702521717?text=${plan.waText}`, '_blank')}
-                  style={{
-                    width: '100%', padding: '14px', borderRadius: 9999,
-                    background: 'linear-gradient(135deg, #D4AF37, #b8960c)',
-                    border: 'none', color: '#0a0a0a',
-                    fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
-                    fontSize: '0.85rem', letterSpacing: '1px',
-                    textTransform: 'uppercase', cursor: 'pointer',
-                    transition: 'filter 0.25s, transform 0.2s',
-                    boxShadow: '0 4px 20px rgba(212,175,55,0.3)',
-                  }}
-                  onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.filter = 'brightness(1.1)'; b.style.transform = 'scale(1.02)'; }}
-                  onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.filter = 'brightness(1)'; b.style.transform = 'scale(1)'; }}
+                  className="btn-primary"
+                  style={{ width: '100%', fontSize: '0.85rem' }}
                 >
                   Book Now
                 </button>
@@ -193,3 +183,4 @@ export default function BestsellersPricing() {
     </section>
   );
 }
+

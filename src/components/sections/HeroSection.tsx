@@ -56,7 +56,7 @@ function IPhoneMockup() {
               fontFamily: "'Great Vibes', cursive",
               color: '#FF1A1A', fontSize: '1.15rem',
               marginBottom: 12, position: 'relative',
-            }}>Cine Hub</span>
+            }}>Cine O Hub</span>
 
             <p style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -257,23 +257,6 @@ export default function HeroSection() {
             </button>
           </div>
 
-          {/* Shimmer divider */}
-          <div className="reveal delay-5" style={{ marginBottom: 28 }}>
-            <div className="shimmer-line" />
-          </div>
-
-          {/* Bottom trust row */}
-          <div className="reveal delay-6" style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'nowrap' }}>
-            {[{ icon: '⚡', text: '10-Min Delivery' }, { icon: '🎬', text: 'Pro Cinematographers' }, { icon: '📍', text: 'Based in Guntur' }].map(({ icon, text }, i) => (
-              <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-                {i > 0 && <div style={{ width: 1, height: 28, background: 'rgba(255,255,255,0.07)', flexShrink: 0 }} />}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
-                  <span style={{ fontSize: '1rem' }}>{icon}</span>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", color: '#555', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '1.2px', fontWeight: 500 }}>{text}</span>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* ── RIGHT: iPhone ── */}
@@ -284,3 +267,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
