@@ -190,16 +190,16 @@ export default function HeroSection() {
 
           {/* "10 Minutes" — one line, no wrap */}
           <h1 className="reveal delay-2" style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 900,
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontWeight: 400,
             fontStyle: 'normal',
-            fontSize: 'clamp(4rem, 10vw, 9.5rem)',
+            fontSize: 'clamp(5rem, 13vw, 12rem)',
             color: '#FF1A1A',
             lineHeight: 1,
             whiteSpace: 'nowrap',
             marginBottom: 40,
             textShadow: '0 0 80px rgba(255,26,26,0.5), 0 0 40px rgba(255,26,26,0.3)',
-            letterSpacing: '-2px',
+            letterSpacing: '2px',
           }}>
             <span style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -220,7 +220,7 @@ export default function HeroSection() {
 
           {/* Trust badges */}
           <div className="reveal delay-3" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 40 }}>
-            {['🕐 24/7 Available', '✅ ISO Certified', "📍 Vijayawada's #1"].map((b) => (
+            {['🕐 24/7 Available', '🎬 Guntur', '📍 Based in Guntur'].map((b) => (
               <span key={b} style={{
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.09)',
@@ -264,7 +264,7 @@ export default function HeroSection() {
 
           {/* Bottom trust row */}
           <div className="reveal delay-6" style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'nowrap' }}>
-            {[{ icon: '⚡', text: '10-Min Delivery' }, { icon: '🎬', text: 'Pro Cinematographers' }, { icon: '📍', text: 'Based in Vijayawada' }].map(({ icon, text }, i) => (
+            {[{ icon: '⚡', text: '10-Min Delivery' }, { icon: '🎬', text: 'Pro Cinematographers' }, { icon: '📍', text: 'Based in Guntur' }].map(({ icon, text }, i) => (
               <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
                 {i > 0 && <div style={{ width: 1, height: 28, background: 'rgba(255,255,255,0.07)', flexShrink: 0 }} />}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
