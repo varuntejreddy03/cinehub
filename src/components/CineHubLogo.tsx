@@ -5,7 +5,7 @@ interface CineHubLogoProps {
 
 export default function CineHubLogo({ scale = 1 }: CineHubLogoProps) {
   const base = 22 * scale;          // font-size of Cineo Hub text (px)
-  const reelSize = base * 1.18;     // diameter of the reel circle
+  const reelSize = base * 0.9;      // diameter of the reel circle
 
   return (
     <div style={{ display: 'inline-flex', flexDirection: 'column', lineHeight: 1, userSelect: 'none', gap: 1 }}>

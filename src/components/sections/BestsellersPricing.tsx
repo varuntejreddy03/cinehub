@@ -14,12 +14,12 @@ const plans = [
   {
     name: 'Gold Plan', subtitle: 'Full Coverage', price: '₹9,999', popular: false, wedding: false,
     waText: "Hi%20Cineo%20Hub%2C%20I%27m%20interested%20in%20the%20Gold%20package!",
-    features: ['8 Hours Shoot', '8 Edited Reels Delivered', 'Fast Delivery (10 mins post shoot)', 'Senior Cinematographer', 'Cineo Hub Branding Included', 'Cineo Hub Creative Direction Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
+    features: ['6 Hours Shoot', '8 Edited Reels Delivered', 'Fast Delivery (10 mins post shoot)', 'Senior Cinematographer', 'Cineo Hub Branding Included', 'Cineo Hub Creative Direction Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
   },
   {
     name: 'Wedding Package', subtitle: 'For Your Special Day', price: '₹12,999', popular: false, wedding: true,
     waText: "Hi%20Cineo%20Hub%2C%20I%27m%20interested%20in%20the%20Wedding%20package!",
-    features: ['1 Edited Reel Delivered', '8 Hours Coverage', 'Trained Cinematographer', 'Cineo Hub Branding Included', 'Cineo Hub Creative Direction Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
+    features: ['10 Edited Reels Delivered', '8 Hours Coverage', 'Trained Cinematographer', 'Cineo Hub Branding Included', 'Cineo Hub Creative Direction Included', 'Priority Support', 'Dedicated Shoot Coordinator'],
   },
 ];
 
@@ -156,8 +156,25 @@ export default function BestsellersPricing() {
               ) : plan.wedding ? (
                 <button
                   onClick={() => window.open(`https://wa.me/917702521717?text=${plan.waText}`, '_blank')}
-                  className="btn-primary"
-                  style={{ width: '100%', fontSize: '0.85rem' }}
+                  style={{
+                    width: '100%', padding: '14px', borderRadius: 9999,
+                    background: `linear-gradient(135deg, ${weddingGold}, ${weddingGoldDark})`,
+                    border: `1.5px solid ${weddingGold}`,
+                    color: '#0f0f0f', fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 700, fontSize: '0.85rem', letterSpacing: '1px',
+                    textTransform: 'uppercase', cursor: 'pointer',
+                    transition: 'filter 0.25s, transform 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    const b = e.currentTarget as HTMLButtonElement;
+                    b.style.filter = 'brightness(1.07)';
+                    b.style.transform = 'scale(1.02)';
+                  }}
+                  onMouseLeave={(e) => {
+                    const b = e.currentTarget as HTMLButtonElement;
+                    b.style.filter = 'brightness(1)';
+                    b.style.transform = 'scale(1)';
+                  }}
                 >
                   Book Now
                 </button>
